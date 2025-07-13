@@ -54,7 +54,13 @@ form.addEventListener("submit", function (event_submit) {
         }
     }
     console.log(numeri_corretti)
-    message.innerHTML = "Hai trovato "+numeri_corretti+" numeri!"
+    if(numeri_corretti == 5){
+        instructions_after.innerHTML = "Hai trovato tutti e 5 i numeri!"
+        form.classList.add("d-none");
+    }
+    else{
+        message.innerHTML = "Hai trovato "+numeri_corretti+" numeri!"
+    }
 })
 
 
